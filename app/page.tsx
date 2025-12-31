@@ -53,7 +53,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      จั่วไพ่ 1-10 ใบ พร้อม AI ทำนายความหมาย
+                      ไพ่ทาโรต์ 78 ใบ Rider-Waite รองรับ 1, 3, 10 ใบ พร้อม AI แม่หมอยิปซีทำนาย
                     </p>
                   </CardContent>
                 </Card>
@@ -70,7 +70,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      ดูดวงไทย ปีนักษัตร วันเกิด ลัคนา
+                      คำนวณปีนักษัตร วันเกิด ลัคนา ตามหลักโหราศาสตร์ไทย + AI อาจารย์หมอดูทำนาย
                     </p>
                   </CardContent>
                 </Card>
@@ -86,7 +86,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">
-                    Western Astrology พร้อม AI วิเคราะห์
+                    คำนวณ Sun Sign, Moon Sign, และ Ascendant จากพิกัดเกิด + AI วิเคราะห์บุคลิกภาพ
                   </p>
                 </CardContent>
               </Card>
@@ -158,7 +158,7 @@ export default function Home() {
                 <CardContent className="pt-0">
                   <ul className="space-y-3 text-sm mb-6">
                     <li className="flex items-center gap-2">
-                      <span className="text-primary">✓</span> 100 requests/day
+                      <span className="text-primary">✓</span> 50 requests/day
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-primary">✓</span> Tarot + Thai API
@@ -186,7 +186,7 @@ export default function Home() {
                 <CardContent className="pt-0">
                   <ul className="space-y-3 text-sm mb-6">
                     <li className="flex items-center gap-2">
-                      <span className="text-primary">✓</span> 10,000 requests/day
+                      <span className="text-primary">✓</span> 5,000 requests/day
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-primary">✓</span> All APIs included
@@ -238,7 +238,9 @@ export default function Home() {
               {[
                 { q: "API Key ได้มาอย่างไร?", a: "สมัครสมาชิกและรับ API Key ได้ทันที ใช้งานได้เลยไม่ต้องรอ" },
                 { q: "รองรับภาษาอะไรบ้าง?", a: "รองรับทั้งภาษาไทยและอังกฤษ ระบุ lang: 'th' หรือ 'en'" },
-                { q: "มี Rate Limit ไหม?", a: "Free: 100/day, Pro: 10,000/day, Enterprise: Unlimited" },
+                { q: "มี Rate Limit ไหม?", a: "Free: 50 req/day, Pro: 5,000 req/day พร้อม AI ทำนาย" },
+                { q: "ไพ่ทาโรต์มีกี่ใบ?", a: "78 ใบตามมาตรฐาน Rider-Waite สุ่มได้ 1, 3 หรือ 10 ใบ" },
+                { q: "ต่างจาก ChatGPT wrap เองยังไง?", a: "เรามี engine คำนวณโหราศาสตร์จริง + prompt ที่ fine-tune มาแล้ว ประหยัดเวลา dev" },
               ].map((item, i) => (
                 <Card key={i} className="hover:shadow-sm transition-shadow">
                   <CardHeader className="pb-2">
