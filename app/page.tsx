@@ -346,6 +346,36 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Section */}
+        <section className="py-20 px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="mb-8">
+              <p className="text-sm text-primary font-medium mb-2">CONTACT</p>
+              <h2 className="text-2xl font-medium">ติดต่อเรา</h2>
+            </div>
+
+            <Card className="p-8">
+              <div className="flex flex-col items-center gap-6">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-3xl">📧</span>
+                </div>
+                <div>
+                  <p className="text-muted-foreground mb-2">สอบถามข้อมูล หรือติดต่อ Support</p>
+                  <a
+                    href="mailto:oracleengine.api@gmail.com"
+                    className="text-xl font-medium text-primary hover:underline"
+                  >
+                    oracleengine.api@gmail.com
+                  </a>
+                </div>
+                <p className="text-sm text-muted-foreground">
+                  ตอบกลับภายใน 24 ชั่วโมง
+                </p>
+              </div>
+            </Card>
+          </div>
+        </section>
+
         {/* Footer - Minimal */}
         <footer className="py-12 px-6 border-t">
           <div className="max-w-4xl mx-auto">
@@ -361,7 +391,7 @@ export default function Home() {
                 <Link href="/tarot" className="text-muted-foreground hover:text-primary">
                   Demo
                 </Link>
-                <a href="mailto:support@oracle-engine.com" className="text-muted-foreground hover:text-primary">
+                <a href="mailto:oracleengine.api@gmail.com" className="text-muted-foreground hover:text-primary">
                   Contact
                 </a>
               </div>
