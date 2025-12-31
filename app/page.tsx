@@ -124,7 +124,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {/* Free */}
-              <Card>
+              <Card className="transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-primary/50 cursor-pointer">
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-base font-medium text-muted-foreground">Free</CardTitle>
                   <div className="py-4">
@@ -149,7 +149,7 @@ export default function Home() {
               </Card>
 
               {/* Pro - Highlighted */}
-              <Card className="border-primary shadow-lg relative">
+              <Card className="border-primary shadow-lg relative transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs px-4 py-1 rounded-full">
                   แนะนำ
                 </div>
@@ -177,7 +177,7 @@ export default function Home() {
               </Card>
 
               {/* Enterprise */}
-              <Card>
+              <Card className="transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-primary/50 cursor-pointer">
                 <CardHeader className="text-center pb-2">
                   <CardTitle className="text-base font-medium text-muted-foreground">Enterprise</CardTitle>
                   <div className="py-4">
