@@ -22,11 +22,11 @@ export function Header() {
     ];
 
     return (
-        <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b">
+        <header className="sticky top-0 z-50 bg-gradient-to-r from-violet-600 to-purple-600 border-b border-purple-500/30 shadow-lg">
             <div className="max-w-6xl mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="font-semibold text-lg text-primary">
+                    <Link href="/" className="font-semibold text-lg text-white">
                         The Oracle Engine
                     </Link>
 
@@ -36,7 +36,7 @@ export function Header() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                                className="text-sm text-white/80 hover:text-white transition-colors"
                             >
                                 {item.label}
                             </Link>
@@ -46,9 +46,9 @@ export function Header() {
                     {/* CTA */}
                     <div className="hidden md:flex items-center gap-4">
                         <Link href={config.apiDocsUrl} target="_blank">
-                            <Button variant="ghost" size="sm">API Docs</Button>
+                            <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">API Docs</Button>
                         </Link>
-                        <Button size="sm" className="gradient-purple text-white">
+                        <Button size="sm" className="bg-white text-purple-600 hover:bg-white/90 font-medium">
                             เริ่มใช้งาน
                         </Button>
                     </div>

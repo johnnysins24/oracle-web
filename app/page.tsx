@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <main className="min-h-screen">
         {/* Hero Section - Clean, focused */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 bg-white">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm text-primary font-medium mb-4 tracking-wide">FORTUNE TELLING API</p>
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-foreground leading-tight">
@@ -36,7 +36,7 @@ export default function Home() {
         </section>
 
         {/* API Services - Card grid with hover effects */}
-        <section id="services" className="py-20 px-6 bg-muted/30 scroll-mt-20">
+        <section id="services" className="py-20 px-6 bg-purple-50 scroll-mt-20">
           <FadeInSection>
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-12">
@@ -99,7 +99,7 @@ export default function Home() {
         </section>
 
         {/* Code Example - Working tabs with all snippets */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 bg-white">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-primary font-medium mb-2">INTEGRATION</p>
@@ -118,7 +118,7 @@ export default function Home() {
         </section>
 
         {/* Use Cases - Visual examples */}
-        <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
+        <section className="py-20 px-6 bg-gradient-to-b from-purple-50 to-violet-100">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-primary font-medium mb-2">USE CASES</p>
@@ -219,7 +219,7 @@ export default function Home() {
         </section>
 
         {/* Pricing - Cleaner cards with better hierarchy */}
-        <section id="pricing" className="py-20 px-6 bg-muted/30 scroll-mt-20">
+        <section id="pricing" className="py-20 px-6 bg-white scroll-mt-20">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-primary font-medium mb-2">PRICING</p>
@@ -308,7 +308,7 @@ export default function Home() {
         </section>
 
         {/* FAQ - Accordion style */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 bg-purple-50">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm text-primary font-medium mb-2">FAQ</p>
@@ -337,20 +337,20 @@ export default function Home() {
         </section>
 
         {/* CTA - Simple and clean */}
-        <section className="py-20 px-6 bg-primary/5">
+        <section className="py-20 px-6 bg-gradient-to-r from-violet-600 to-purple-600">
           <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-2xl font-medium mb-4">พร้อมเริ่มใช้งาน?</h2>
-            <p className="text-muted-foreground mb-8">
+            <h2 className="text-2xl font-medium mb-4 text-white">พร้อมเริ่มใช้งาน?</h2>
+            <p className="text-white/80 mb-8">
               เริ่มต้นฟรี ไม่ต้องใช้บัตรเครดิต
             </p>
-            <Button size="lg" className="gradient-purple text-white px-10">
+            <Button size="lg" className="bg-white text-purple-600 hover:bg-white/90 px-10 font-medium">
               สมัครใช้งานฟรี
             </Button>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6 bg-white">
           <div className="max-w-2xl mx-auto text-center">
             <div className="mb-8">
               <p className="text-sm text-primary font-medium mb-2">CONTACT</p>
