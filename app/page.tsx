@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { config } from "@/lib/config";
 import { Header } from "@/components/Header";
 import { CodeTabs } from "@/components/CodeTabs";
+import { FadeInSection } from "@/components/FadeInSection";
 
 export default function Home() {
   return (
@@ -36,63 +37,65 @@ export default function Home() {
 
         {/* API Services - Card grid with hover effects */}
         <section id="services" className="py-20 px-6 bg-muted/30 scroll-mt-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-sm text-primary font-medium mb-2">SERVICES</p>
-              <h2 className="text-2xl font-medium">API Endpoints</h2>
-            </div>
+          <FadeInSection>
+            <div className="max-w-5xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-sm text-primary font-medium mb-2">SERVICES</p>
+                <h2 className="text-2xl font-medium">API Endpoints</h2>
+              </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/tarot" className="group">
-                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
+              <div className="grid md:grid-cols-3 gap-8">
+                <Link href="/tarot" className="group">
+                  <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
+                    <CardHeader>
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <span className="text-2xl">🎴</span>
+                      </div>
+                      <CardTitle className="text-lg">Tarot API</CardTitle>
+                      <CardDescription className="font-mono text-xs">/v1/ai/tarot</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
+                        ไพ่ทาโรต์ 78 ใบ Rider-Waite รองรับ 1, 3, 10 ใบ พร้อม AI แม่หมอยิปซีทำนาย
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+
+                <Link href="/thai" className="group">
+                  <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
+                    <CardHeader>
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <span className="text-2xl">🔮</span>
+                      </div>
+                      <CardTitle className="text-lg">Thai Fortune API</CardTitle>
+                      <CardDescription className="font-mono text-xs">/v1/ai/thai</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
+                        คำนวณปีนักษัตร วันเกิด ลัคนา ตามหลักโหราศาสตร์ไทย + AI อาจารย์หมอดูทำนาย
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
+
+                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <span className="text-2xl">🎴</span>
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                      <span className="text-2xl">⭐</span>
                     </div>
-                    <CardTitle className="text-lg">Tarot API</CardTitle>
-                    <CardDescription className="font-mono text-xs">/v1/ai/tarot</CardDescription>
+                    <CardTitle className="text-lg">Natal Chart API</CardTitle>
+                    <CardDescription className="font-mono text-xs">/v1/ai/natal</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      ไพ่ทาโรต์ 78 ใบ Rider-Waite รองรับ 1, 3, 10 ใบ พร้อม AI แม่หมอยิปซีทำนาย
+                      คำนวณ Sun Sign, Moon Sign, และ Ascendant จากพิกัดเกิด + AI วิเคราะห์บุคลิกภาพ
                     </p>
                   </CardContent>
                 </Card>
-              </Link>
-
-              <Link href="/thai" className="group">
-                <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                      <span className="text-2xl">🔮</span>
-                    </div>
-                    <CardTitle className="text-lg">Thai Fortune API</CardTitle>
-                    <CardDescription className="font-mono text-xs">/v1/ai/thai</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-muted-foreground">
-                      คำนวณปีนักษัตร วันเกิด ลัคนา ตามหลักโหราศาสตร์ไทย + AI อาจารย์หมอดูทำนาย
-                    </p>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <span className="text-2xl">⭐</span>
-                  </div>
-                  <CardTitle className="text-lg">Natal Chart API</CardTitle>
-                  <CardDescription className="font-mono text-xs">/v1/ai/natal</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    คำนวณ Sun Sign, Moon Sign, และ Ascendant จากพิกัดเกิด + AI วิเคราะห์บุคลิกภาพ
-                  </p>
-                </CardContent>
-              </Card>
+              </div>
             </div>
-          </div>
+          </FadeInSection>
         </section>
 
         {/* Code Example - Working tabs with all snippets */}
