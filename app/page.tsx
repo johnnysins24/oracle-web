@@ -94,7 +94,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Code Example - Single focused example with tabs look */}
+        {/* Code Example - Working tabs with all snippets */}
         <section className="py-20 px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -104,26 +104,106 @@ export default function Home() {
 
             <Card className="overflow-hidden">
               <div className="flex border-b bg-muted/50">
-                <button className="px-6 py-3 text-sm font-medium border-b-2 border-primary text-primary">
+                <button
+                  id="tab-curl"
+                  className="px-6 py-3 text-sm font-medium border-b-2 border-primary text-primary"
+                  onClick={() => {
+                    document.querySelectorAll('[id^=code-]').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('[id^=tab-]').forEach(el => {
+                      el.classList.remove('border-primary', 'text-primary');
+                      el.classList.add('text-muted-foreground');
+                    });
+                    document.getElementById('code-curl')?.classList.remove('hidden');
+                    document.getElementById('tab-curl')?.classList.add('border-primary', 'text-primary');
+                    document.getElementById('tab-curl')?.classList.remove('text-muted-foreground');
+                  }}
+                >
                   cURL
                 </button>
-                <button className="px-6 py-3 text-sm text-muted-foreground hover:text-foreground">
+                <button
+                  id="tab-python"
+                  className="px-6 py-3 text-sm text-muted-foreground hover:text-foreground"
+                  onClick={() => {
+                    document.querySelectorAll('[id^=code-]').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('[id^=tab-]').forEach(el => {
+                      el.classList.remove('border-primary', 'text-primary');
+                      el.classList.add('text-muted-foreground');
+                    });
+                    document.getElementById('code-python')?.classList.remove('hidden');
+                    document.getElementById('tab-python')?.classList.add('border-primary', 'text-primary');
+                    document.getElementById('tab-python')?.classList.remove('text-muted-foreground');
+                  }}
+                >
                   Python
                 </button>
-                <button className="px-6 py-3 text-sm text-muted-foreground hover:text-foreground">
+                <button
+                  id="tab-js"
+                  className="px-6 py-3 text-sm text-muted-foreground hover:text-foreground"
+                  onClick={() => {
+                    document.querySelectorAll('[id^=code-]').forEach(el => el.classList.add('hidden'));
+                    document.querySelectorAll('[id^=tab-]').forEach(el => {
+                      el.classList.remove('border-primary', 'text-primary');
+                      el.classList.add('text-muted-foreground');
+                    });
+                    document.getElementById('code-js')?.classList.remove('hidden');
+                    document.getElementById('tab-js')?.classList.add('border-primary', 'text-primary');
+                    document.getElementById('tab-js')?.classList.remove('text-muted-foreground');
+                  }}
+                >
                   JavaScript
                 </button>
               </div>
-              <div className="p-6 bg-slate-950 text-slate-50 font-mono text-sm leading-relaxed overflow-x-auto">
+
+              {/* cURL */}
+              <div id="code-curl" className="p-6 bg-slate-950 text-slate-50 font-mono text-sm leading-relaxed overflow-x-auto">
                 <pre className="whitespace-pre-wrap">
-                  {`curl -X POST "https://api.oracle-engine.com/v1/ai/tarot" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
+                  {`curl -X POST "https://oracle-engine-production.up.railway.app/v1/ai/tarot" \\
   -H "Content-Type: application/json" \\
   -d '{
     "count": 3,
     "question": "ความรักปีหน้า",
     "lang": "th"
   }'`}
+                </pre>
+              </div>
+
+              {/* Python */}
+              <div id="code-python" className="hidden p-6 bg-slate-950 text-slate-50 font-mono text-sm leading-relaxed overflow-x-auto">
+                <pre className="whitespace-pre-wrap">
+                  {`import requests
+
+url = "https://oracle-engine-production.up.railway.app/v1/ai/tarot"
+data = {
+    "count": 3,
+    "question": "ความรักปีหน้า",
+    "lang": "th"
+}
+
+response = requests.post(url, json=data)
+result = response.json()
+
+print(result["interpretation"])`}
+                </pre>
+              </div>
+
+              {/* JavaScript */}
+              <div id="code-js" className="hidden p-6 bg-slate-950 text-slate-50 font-mono text-sm leading-relaxed overflow-x-auto">
+                <pre className="whitespace-pre-wrap">
+                  {`const response = await fetch(
+  "https://oracle-engine-production.up.railway.app/v1/ai/tarot",
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      count: 3,
+      question: "ความรักปีหน้า",
+      lang: "th"
+    })
+  }
+);
+
+const data = await response.json();
+console.log(data.interpretation);`}
                 </pre>
               </div>
             </Card>
