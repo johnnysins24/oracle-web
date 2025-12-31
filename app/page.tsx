@@ -114,6 +114,107 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Use Cases - Visual examples */}
+        <section className="py-20 px-6 bg-gradient-to-b from-background to-muted/30">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm text-primary font-medium mb-2">USE CASES</p>
+              <h2 className="text-2xl font-medium">เอาไปใช้ทำอะไรได้บ้าง?</h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* LINE Bot */}
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <span className="text-2xl">💬</span>
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">LINE Bot ดูดวง</CardTitle>
+                      <CardDescription className="text-xs">Chatbot สำหรับร้านค้า</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="bg-slate-950 rounded-lg p-4 text-sm font-mono">
+                    <p className="text-green-400">ผู้ใช้: "ดูดวงความรักหน่อย"</p>
+                    <p className="text-slate-400 mt-2">Bot → API → Response</p>
+                    <p className="text-violet-400 mt-2">"ไพ่ The Lovers บ่งบอกว่า..."</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Daily App */}
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <span className="text-2xl">📱</span>
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">App ดูดวงประจำวัน</CardTitle>
+                      <CardDescription className="text-xs">Push notification ทุกเช้า</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="bg-slate-950 rounded-lg p-4 text-sm font-mono">
+                    <p className="text-blue-400">🔔 Daily Horoscope</p>
+                    <p className="text-slate-400 mt-2">วันอังคาร × ปีมะเมีย</p>
+                    <p className="text-violet-400 mt-2">"วันนี้เหมาะแก่การเริ่มต้นใหม่..."</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Tarot Game */}
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <span className="text-2xl">🎴</span>
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">เกม Tarot Online</CardTitle>
+                      <CardDescription className="text-xs">Interactive web experience</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="bg-slate-950 rounded-lg p-4 text-sm text-center">
+                    <div className="inline-block border border-violet-500/50 rounded-lg p-3 mb-2">
+                      <span className="text-3xl">🃏</span>
+                    </div>
+                    <p className="text-violet-400">"The Tower บ่งบอกว่าการเปลี่ยนแปลง..."</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Content Creator */}
+              <Card className="group overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/50">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <span className="text-2xl">📰</span>
+                    </div>
+                    <div>
+                      <CardTitle className="text-lg">Content Generator</CardTitle>
+                      <CardDescription className="text-xs">สร้างเนื้อหาอัตโนมัติ</CardDescription>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="bg-slate-950 rounded-lg p-4 text-sm font-mono">
+                    <p className="text-orange-400">📝 ดวงราศีประจำสัปดาห์</p>
+                    <p className="text-slate-400 mt-2">API × 12 ราศี × Schedule</p>
+                    <p className="text-violet-400 mt-2">"ปีมะโรงธาตุดินสัปดาห์นี้..."</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing - Cleaner cards with better hierarchy */}
         <section id="pricing" className="py-20 px-6 bg-muted/30 scroll-mt-20">
           <div className="max-w-4xl mx-auto">
